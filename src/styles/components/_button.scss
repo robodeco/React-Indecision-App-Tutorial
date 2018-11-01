@@ -1,0 +1,41 @@
+//Big Button
+//border-bottom takes in the width argument, the type of border, and the darken condition that takes a value and returns a darker value. it gets called just like a js function.
+.big-button {
+  background: $purple;
+  border: none;
+  border-bottom: .6rem solid darken($purple, 10%);
+  color: white;
+  font-weight: bold;
+  font-size: $l-size;
+  margin-bottom: $m-size;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+.big-button:disabled {
+  opacity: .5;
+}
+
+//Button
+.button {
+  background: $purple;
+  border: none;
+  border-bottom: .3rem solid darken($purple, 10%);
+  color: white;
+  font-weight: 500;
+  padding: $s-size;
+}
+
+//original block youre changing, followed by two hyphens (following the rules of the syntax), then whatever name you want to pick for the alternative class
+.button--link {
+  background: none;
+  border: none;
+  color: $off-white;
+  padding: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .big-button {
+    margin-bottom: $xl-size;
+  }
+}
